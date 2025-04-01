@@ -11,7 +11,6 @@ class clientes(models.Model):
 
     @property
     def is_authenticated(self):
-        """Sempre retorna True para clientes existentes"""
         return True
 
     def save(self,*args, **kwargs):
