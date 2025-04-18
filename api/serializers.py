@@ -1,8 +1,10 @@
 from rest_framework import serializers
-from .models import empresa
+from .models import dim_cliente
 
-class EmpresaSerializer(serializers.ModelSerializer):
+class ClienteSerializer(serializers.ModelSerializer):
+    
     class Meta:
-        model = empresa
-        fields = ['client_name','api_token','ativo']
-        read_only_fileds = ['id','created_at']
+        model=dim_cliente
+        fields=['id_cliente','nome_cliente','segmento','pais','cidade','estado','codigo_postal',
+                'regiao']
+        read_only_fields=['id','created_at']
