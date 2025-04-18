@@ -1,4 +1,4 @@
-#!/home/jonathanbrito/data_engeneer/api_djangorest/venv/bin/python3
+#!/home/jonathan-brito/python-projects/api_djangorest/venv/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys

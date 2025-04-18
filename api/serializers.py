@@ -1,8 +1,8 @@
 from rest_framework import serializers
-from .models import lojas
+from .models import empresa
 
-class lojaserializer(serializers.ModelSerializer):
+class EmpresaSerializer(serializers.ModelSerializer):
     class Meta:
-        model = lojas
-        fields = [ 'Loja', 'Endereco', 'Bandeira']
+        model = empresa
+        fields = ['client_name','api_token','ativo']
         read_only_fileds = ['id','created_at']

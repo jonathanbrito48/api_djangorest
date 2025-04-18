@@ -1,6 +1,6 @@
 from rest_framework import authentication
 from rest_framework import exceptions
-from .models import clientes
+from .models import empresa
 import hashlib
 
 class MD5TokenAuthentication(authentication.BaseAuthentication):
@@ -19,8 +19,8 @@ class MD5TokenAuthentication(authentication.BaseAuthentication):
         
         try:
             token = auth[1].decode()
-            cliente = clientes.objects.get(api_token=token,ativo=True)
-        except clientes.DoesNotExist:
+            cliente = empresa.objects.get(api_token=token,ativo=True)
+        except empresa.DoesNotExist:
             raise exceptions.AuthenticationFailed('Token inválido. Cliente não encontrado ou inativo')
 
         return (cliente,None) 
