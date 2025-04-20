@@ -1,6 +1,6 @@
 from django.urls import path,include
 from rest_framework.routers import DefaultRouter
-from .views import ClienteViewSet,ProdutoViewSet,TempoVendaViewSet,TempoEntregaViewSet,TipoEntregaViewSet,VendaViewSet
+from .views import IntegrationViewSet
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
@@ -17,13 +17,7 @@ schema_view = get_schema_view(
 
 
 router = DefaultRouter()
-router.register(r'cliente',ClienteViewSet,basename='cliente')
-router.register(r'produto',ProdutoViewSet,basename='produto')
-router.register(r'tempo-venda',TempoVendaViewSet,basename='tempo-venda')
-router.register(r'tempo-entrega',TempoEntregaViewSet,basename='tempo-entrega')
-router.register(r'tipo-entrega',TipoEntregaViewSet,basename='tipo-entrega')
-router.register(r'venda',VendaViewSet,basename='venda')
-
+router.register(r'integration',IntegrationViewSet,basename='integratio')
 
 urlpatterns = [
     path('',include(router.urls)),
