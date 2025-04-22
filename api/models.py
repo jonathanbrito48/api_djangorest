@@ -42,10 +42,10 @@ class integration(models.Model):
     descricao_produto=models.CharField(max_length=500,null=False,blank=False)
     categoria_produto=models.CharField(max_length=200,null=False,blank=False)
     subcategoria_produto=models.CharField(max_length=200,null=False,blank=False)
-    valor_venda=models.DecimalField(decimal_places=2,max_digits=2,null=False,blank=False)
-    quantidade_vendida=models.DecimalField(decimal_places=2,max_digits=2,null=False,blank=False)
-    desconto=models.DecimalField(decimal_places=2,max_digits=2,null=False,blank=False)
-    margem=models.DecimalField(decimal_places=2,max_digits=2,null=False,blank=False)
+    valor_venda=models.DecimalField(decimal_places=10,max_digits=15,null=False,blank=False)
+    quantidade_vendida=models.DecimalField(decimal_places=10,max_digits=15,null=False,blank=False)
+    desconto=models.DecimalField(decimal_places=10,max_digits=15,null=False,blank=False)
+    margem=models.DecimalField(decimal_places=10,max_digits=15,null=False,blank=False)
     created_at=models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
